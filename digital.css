@@ -24,7 +24,7 @@
 
 .digital-heading h2 em { color: var(--lemon); }
 .digital-heading > p { max-width: 550px; font-size: 1.2rem; }
-.digital-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+.digital-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 
 .digital-card {
   position: relative;
@@ -40,6 +40,7 @@
 .card-lima { background: var(--aqua); }
 .card-gozzoli { background: var(--coral); }
 .card-gow { background: var(--lemon); }
+.card-pride { background: #f3acd0; }
 
 .browser-bar {
   display: flex;
