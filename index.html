@@ -15,22 +15,45 @@
   <a class="skip-link" href="#work">Skip to selected work</a>
   <header class="site-header">
     <a class="wordmark" href="#top" aria-label="Alice Sgarlata, home">ALICE<span>✳</span>SGARLATA</a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language switcher">
+        <button class="lang-btn active" type="button" data-lang="en" aria-pressed="true">EN</button>
+        <span aria-hidden="true">/</span>
+        <button class="lang-btn" type="button" data-lang="it" aria-pressed="false">IT</button>
+      </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
     <nav id="site-nav" aria-label="Primary navigation">
-      <a href="#work">Work</a>
-      <a href="#editorial">Editorial</a>
-      <a href="#digital">Digital</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#work" data-i18n="nav_work">Work</a>
+      <a href="#editorial" data-i18n="nav_editorial">Editorial</a>
+      <a href="#digital" data-i18n="nav_digital">Digital</a>
+      <a href="#about" data-i18n="nav_about">About</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow">Editorial · Visual communication · Digital experiences</p>
-      <h1 id="hero-title">Ideas that move<br>between <em>words,</em><br>images & screens.</h1>
-      <p class="hero-copy">I write, design and build digital experiences for independent culture, music and cultural heritage — combining editorial thinking, visual language and technology.</p>
-      <a class="round-link" href="#work" aria-label="Explore selected work"><span>Explore<br>my work</span><b>↓</b></a>
+    <section class="hero hero-personal" aria-labelledby="hero-title">
+      <div class="hero-intro">
+        <p class="eyebrow" data-i18n="hero_eyebrow">Hi, I’m Alice · Bologna, Italy</p>
+        <h1 id="hero-title" data-i18n-html="hero_title">I write, draw,<br>design & build<br><em>curious things.</em></h1>
+        <p class="hero-copy" data-i18n="hero_copy">I’m a multidisciplinary creative and Digital Humanities student working across editorial writing, visual communication and interactive digital projects.</p>
+      </div>
+
+      <div class="hero-story reveal reveal-up" aria-label="A little more about me">
+        <p data-i18n-html="story_1">I’ve always moved between different ways of understanding and expressing things: <strong>music, writing, drawing, languages and technology.</strong></p>
+        <p data-i18n="story_2">I’m especially drawn to independent culture, live music, cultural heritage and the small details that make places and communities feel alive.</p>
+        <p class="hero-thread" data-i18n="story_3">Curiosity is the thread connecting everything I do.</p>
+      </div>
+
+      <div class="hero-hobbies stagger-group" aria-label="Things that shape my work">
+        <article class="reveal reveal-up"><span>01</span><h2 data-i18n="hobby1_title">Music first</h2><p data-i18n="hobby1_copy">I’m constantly looking for new sounds, small venues and independent scenes — often the starting point for my writing and visual work.</p></article>
+        <article class="reveal reveal-up"><span>02</span><h2 data-i18n="hobby2_title">Drawing what I notice</h2><p data-i18n-html="hobby2_copy">Plants, places, characters and everyday details feed my personal illustration practice, <strong>Puntolineare</strong>.</p></article>
+        <article class="reveal reveal-up"><span>03</span><h2 data-i18n="hobby3_title">Museums, archives, rabbit holes</h2><p data-i18n="hobby3_copy">I like understanding how cultural material is organised, preserved and turned into something people can actually explore.</p></article>
+        <article class="reveal reveal-up"><span>04</span><h2 data-i18n="hobby4_title">Learning by making</h2><p data-i18n-html="hobby4_copy">A lot of my projects start with a question like: <em>“Can I build this?”</em> Then I research, test, learn and iterate until it works.</p></article>
+      </div>
+
+      <a class="round-link" href="#work" aria-label="Explore selected work"><span data-i18n-html="see_work">See what<br>I make</span><b>↓</b></a>
       <div class="hero-doodles" aria-hidden="true">
         <span class="flower">✿</span><span class="spark">✦</span><span class="wave">∿∿∿</span>
       </div>
@@ -40,7 +63,7 @@
 
     <section class="work-section" id="work" aria-labelledby="work-title">
       <div class="section-heading">
-        <div><p class="eyebrow">Selected visual work · 2024—2026</p><h2 id="work-title">Things I’ve<br>been making.</h2></div>
+        <div class="reveal-title-wrap"><p class="eyebrow reveal reveal-up" data-i18n="work_eyebrow">Selected visual work · 2024—2026</p><h2 id="work-title" class="scroll-title" data-i18n-html="work_title">Things I’ve<br>been making.</h2></div>
         <div class="filters" aria-label="Filter projects">
           <button class="filter active" data-filter="all" type="button">All</button>
           <button class="filter" data-filter="identity" type="button">Identity</button>
@@ -50,28 +73,28 @@
       </div>
 
       <div class="project-grid">
-        <article class="project project-featured coral" data-category="identity illustration">
+        <article class="project project-featured coral reveal reveal-left" data-category="identity illustration">
           <button class="project-open" data-project="minuzie" type="button" aria-label="Open Minuzie Fest project">
             <div class="project-image"><img src="assets/minuzie-poster.png" alt="Black and white illustrated poster for Minuzie Fest, featuring a frog among plants"></div>
             <div class="project-meta"><span>Visual identity · Illustration · Merchandise</span><b>2026</b></div>
             <h3>Minuzie Fest</h3><p>A lively identity built around a curious frog, handmade lettering and a miniature natural world.</p>
           </button>
         </article>
-        <article class="project cobalt" data-category="posters illustration">
+        <article class="project cobalt reveal reveal-right" data-category="posters illustration">
           <button class="project-open" data-project="casalone" type="button" aria-label="Open Casalone music posters project">
             <div class="project-image portrait"><img src="assets/balkan-poster.png" alt="Orange and blue poster for Balkan Express and Bambilox"></div>
             <div class="project-meta"><span>Poster design · Art direction</span><b>2025—</b></div>
             <h3>Casalone Music Posters</h3><p>An evolving poster series translating each event’s sound into a different visual language.</p>
           </button>
         </article>
-        <article class="project lemon offset" data-category="illustration">
+        <article class="project lemon offset reveal reveal-left" data-category="illustration">
           <button class="project-open" data-project="puntolineare" type="button" aria-label="Open personal illustration project">
             <div class="project-image landscape"><img src="assets/bologna-drawing.jpg" alt="Observational drawing of a leafy tree and a red structure in Bologna"></div>
             <div class="project-meta"><span>Personal illustration · Drawing</span><b>Ongoing</b></div>
             <h3>Puntolineare</h3><p>Personal drawings inspired by natural forms, places and small everyday stories.</p>
           </button>
         </article>
-        <article class="project violet compact" data-category="identity illustration">
+        <article class="project violet compact reveal reveal-right" data-category="identity illustration">
           <div class="project-image square"><img src="assets/code-crackers.png" alt="Pixel art graphic reading Code Crackers around a computer chip cracker"></div>
           <div class="project-meta"><span>Graphic experiment · Pixel art</span><b>Selected work</b></div>
           <h3>Code Crackers</h3><p>A playful visual experiment mixing technology, food and retro-game aesthetics.</p>
@@ -80,22 +103,22 @@
     </section>
 
     <section class="editorial" id="editorial" aria-labelledby="editorial-title">
-      <div class="editorial-heading">
+      <div class="editorial-heading editorial-sticky-head">
         <div>
-          <p class="eyebrow">Music journalism · Cultural writing · Interviews</p>
-          <h2 id="editorial-title">Editorial.</h2>
+          <p class="eyebrow" data-i18n="editorial_eyebrow">Music journalism · Cultural writing · Interviews</p>
+          <h2 id="editorial-title" class="scroll-title" data-i18n="editorial_title">Editorial.</h2>
         </div>
-        <p>I write about music, independent culture and the way digital platforms shape how we discover, share and experience creative work. My editorial practice moves between criticism, cultural reporting, interviews and social-first storytelling.</p>
+        <p data-i18n="editorial_intro">I write about music, independent culture and the way digital platforms shape how we discover, share and experience creative work. My editorial practice moves between criticism, cultural reporting, interviews and social-first storytelling.</p>
       </div>
       <div class="editorial-grid">
-        <article class="editorial-card editorial-featured">
+        <article class="editorial-card editorial-featured reveal reveal-up">
           <div class="editorial-index">01</div>
           <p class="eyebrow">Cultural commentary · Music & technology</p>
           <h3>E i tuoi ascolti,<br>sono davvero tuoi?</h3>
           <p>A social-first editorial piece exploring how recommendation algorithms, hype culture, FOMO and platform metrics shape both music discovery and listening habits.</p>
           <div class="editorial-foot"><span>Siamo Un Magazine · 2026</span><span>Concept · Research · Writing</span></div>
         </article>
-        <article class="editorial-card">
+        <article class="editorial-card reveal reveal-left">
           <div class="editorial-index">02</div>
           <p class="eyebrow">Cultural feature · Local music scene</p>
           <h3>Bologna d’estate<br>non si spegne</h3>
@@ -103,14 +126,14 @@
           <div class="editorial-foot"><span>Siamo Un Magazine · 2026</span><span>Research · Editorial structure · Writing</span></div>
           <a class="editorial-link" href="https://www.instagram.com/p/DaC4aRNDAff/" target="_blank" rel="noreferrer">View published post ↗</a>
         </article>
-        <article class="editorial-card">
+        <article class="editorial-card reveal reveal-right">
           <div class="editorial-index">03</div>
           <p class="eyebrow">Long-form review · Music criticism</p>
           <h3>Nati Stelle<br>— Comrad</h3>
           <p>A long-form review of Comrad’s debut album, reading its punk and emo influences through themes of belonging, resistance and the tension between leaving and remaining in Southern Italy.</p>
           <div class="editorial-foot"><span>Eterogenesi · 2025</span><span>Album analysis · Long-form writing</span></div>
         </article>
-        <article class="editorial-card">
+        <article class="editorial-card reveal reveal-up">
           <div class="editorial-index">04</div>
           <p class="eyebrow">Artist interview · Editorial profile</p>
           <h3>La mia stella aggressiva si nasconde nelle virgole e nei punti</h3>
@@ -122,32 +145,32 @@
     </section>
 
     <section class="digital" id="digital" aria-labelledby="digital-title">
-      <div class="digital-heading"><div><p class="eyebrow">Web design · Digital humanities</p><h2 id="digital-title">Ideas that live<br><em>on the web.</em></h2></div><p>Alongside my editorial and visual practice, I design and build academic digital projects that connect cultural heritage, storytelling and interactive web experiences.</p></div>
+      <div class="digital-heading"><div><p class="eyebrow reveal reveal-up" data-i18n="digital_eyebrow">Web design · Digital humanities</p><h2 id="digital-title" class="scroll-title" data-i18n-html="digital_title">Ideas that live<br><em>on the web.</em></h2></div><p class="reveal reveal-up" data-i18n="digital_intro">Alongside my editorial and visual practice, I design and build academic digital projects that connect cultural heritage, storytelling and interactive web experiences.</p></div>
       <div class="digital-grid">
-        <article class="digital-card card-lima"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>lima.live</span></div><div class="digital-card-body"><span class="project-number">01</span><p class="eyebrow">Web design · Interactive map</p><h3>Lima Live Cinema Museum</h3><p>A digital museum that turns movie locations into an explorable cultural experience through an interactive map, responsive interfaces and location-based storytelling.</p><div class="digital-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Leaflet</span></div><div class="digital-links"><a href="https://alicesgarlata.github.io/limalivecinemamuseum/" target="_blank" rel="noreferrer">Visit website ↗</a><a href="https://github.com/alicesgarlata/limalivecinemamuseum" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
-        <article class="digital-card card-gozzoli"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gozzoli.graph</span></div><div class="digital-card-body"><span class="project-number">02</span><p class="eyebrow">Cultural heritage · Linked Open Data</p><h3>Benozzo Gozzoli Knowledge Graph</h3><p>A collaborative academic project that represents and enriches information about the Renaissance painter through RDF, SPARQL and a public-facing website.</p><div class="digital-tags"><span>RDF</span><span>SPARQL</span><span>Web design</span></div><div class="digital-links"><a href="https://alicesgarlata.github.io/gozzoli-project/" target="_blank" rel="noreferrer">Visit website ↗</a><a href="https://github.com/alicesgarlata/gozzoli-project" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
-        <article class="digital-card card-gow"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gow.lodlam</span></div><div class="digital-card-body"><span class="project-number">03</span><p class="eyebrow">Information architecture · LODLAM</p><h3>God of War: A Linked Open Data Model</h3><p>An individual project transforming a cultural source into an interactive article, entity explorer and RDF knowledge representation.</p><div class="digital-tags"><span>TEI/XML</span><span>Python</span><span>RDF</span></div><div class="digital-links"><a href="https://alicesgarlata.github.io/gowlodlam/" target="_blank" rel="noreferrer">Visit website ↗</a><a href="https://github.com/alicesgarlata/gowlodlam" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
-        <article class="digital-card card-pride"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>fighting.for.pride</span></div><div class="digital-card-body"><span class="project-number">04</span><p class="eyebrow">Personal web-design iteration · Exhibition</p><h3>Fighting for Pride</h3><p>A personal website iteration presenting a collaborative hybrid exhibition concept on Italian Pride history, combining archival research, physical space and interactive media.</p><div class="digital-tags"><span>Web design</span><span>UX research</span><span>Twine</span></div><div class="digital-links"><a href="https://fightingforpride.figma.site/" target="_blank" rel="noreferrer">Explore WebApp ↗</a><a href="https://github.com/alicesgarlata/pridetry" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
+        <article class="digital-card card-lima reveal reveal-left"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>lima.live</span></div><div class="digital-card-body"><span class="project-number">01</span><p class="eyebrow">Web design · Interactive map</p><h3>Lima Live Cinema Museum</h3><p>A digital museum that turns movie locations into an explorable cultural experience through an interactive map, responsive interfaces and location-based storytelling.</p><div class="digital-tags"><span>HTML/CSS</span><span>JavaScript</span><span>Leaflet</span></div><div class="digital-links"><a href="https://alicesgarlata.github.io/limalivecinemamuseum/" target="_blank" rel="noreferrer">Visit website ↗</a><a href="https://github.com/alicesgarlata/limalivecinemamuseum" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
+        <article class="digital-card card-gozzoli reveal reveal-right"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gozzoli.graph</span></div><div class="digital-card-body"><span class="project-number">02</span><p class="eyebrow">Cultural heritage · Linked Open Data</p><h3>Benozzo Gozzoli Knowledge Graph</h3><p>A collaborative academic project that represents and enriches information about the Renaissance painter through RDF, SPARQL and a public-facing website.</p><div class="digital-tags"><span>RDF</span><span>SPARQL</span><span>Web design</span></div><div class="digital-links"><a href="https://alicesgarlata.github.io/gozzoli-project/" target="_blank" rel="noreferrer">Visit website ↗</a><a href="https://github.com/alicesgarlata/gozzoli-project" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
+        <article class="digital-card card-gow reveal reveal-left"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>gow.lodlam</span></div><div class="digital-card-body"><span class="project-number">03</span><p class="eyebrow">Information architecture · LODLAM</p><h3>God of War: A Linked Open Data Model</h3><p>An individual project transforming a cultural source into an interactive article, entity explorer and RDF knowledge representation.</p><div class="digital-tags"><span>TEI/XML</span><span>Python</span><span>RDF</span></div><div class="digital-links"><a href="https://alicesgarlata.github.io/gowlodlam/" target="_blank" rel="noreferrer">Visit website ↗</a><a href="https://github.com/alicesgarlata/gowlodlam" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
+        <article class="digital-card card-pride reveal reveal-right"><div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>fighting.for.pride</span></div><div class="digital-card-body"><span class="project-number">04</span><p class="eyebrow">Personal web-design iteration · Exhibition</p><h3>Fighting for Pride</h3><p>A personal website iteration presenting a collaborative hybrid exhibition concept on Italian Pride history, combining archival research, physical space and interactive media.</p><div class="digital-tags"><span>Web design</span><span>UX research</span><span>Twine</span></div><div class="digital-links"><a href="https://fightingforpride.figma.site/" target="_blank" rel="noreferrer">Explore WebApp ↗</a><a href="https://github.com/alicesgarlata/pridetry" target="_blank" rel="noreferrer">View code ↗</a></div></div></article>
       </div>
       <a class="github-banner" href="https://github.com/alicesgarlata" target="_blank" rel="noreferrer"><span>Explore experiments, university projects and source code</span><strong>github.com/alicesgarlata ↗</strong></a>
     </section>
 
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="about-sticker" aria-hidden="true">KEEP<br>THINGS<br>CURIOUS ✦</div>
-      <div class="about-copy">
-        <p class="eyebrow">About Alice</p>
-        <h2 id="about-title">Writing, designing<br>and building with <em>curiosity.</em></h2>
-        <p class="large-copy">I’m Alice, a multidisciplinary creative working across editorial writing, visual communication and digital humanities.</p>
-        <p>My practice moves between music journalism, graphic design, cultural communication and interactive web projects. I write about independent music and cultural scenes, create visual communication for concerts and events in Bologna, and build digital projects around cultural heritage, archives and storytelling.</p>
-        <p>I’m interested in the point where content, design and technology meet: how research becomes a story, how information becomes an interface, and how digital tools can make culture more accessible and engaging.</p>
-        <p><strong>Puntolineare</strong> is the nickname I use for my personal illustration practice — a space for experimentation, visual notes and things made simply because they spark curiosity.</p>
+      <div class="about-copy reveal reveal-up">
+        <p class="eyebrow" data-i18n="about_eyebrow">About Alice</p>
+        <h2 id="about-title" data-i18n-html="about_title">Writing, designing<br>and building with <em>curiosity.</em></h2>
+        <p class="large-copy" data-i18n="about_large">I’m Alice, a multidisciplinary creative working across editorial writing, visual communication and digital humanities.</p>
+        <p data-i18n="about_p1">My practice moves between music journalism, graphic design, cultural communication and interactive web projects. I write about independent music and cultural scenes, create visual communication for concerts and events in Bologna, and build digital projects around cultural heritage, archives and storytelling.</p>
+        <p data-i18n="about_p2">I’m interested in the point where content, design and technology meet: how research becomes a story, how information becomes an interface, and how digital tools can make culture more accessible and engaging.</p>
+        <p data-i18n-html="about_p3"><strong>Puntolineare</strong> is the nickname I use for my personal illustration practice — a space for experimentation, visual notes and things made simply because they spark curiosity.</p>
         <div class="skills" aria-label="Creative fields"><span>Editorial writing</span><span>Music journalism</span><span>Graphic design</span><span>Digital communication</span><span>Web design</span><span>Digital humanities</span></div>
       </div>
     </section>
 
-    <section class="contact" id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow">Have a project, a gig or an idea?</p>
-      <h2 id="contact-title">Let’s make<br>something <em>alive.</em></h2>
+    <section class="contact reveal reveal-up" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow" data-i18n="contact_eyebrow">Have a project, a gig or an idea?</p>
+      <h2 id="contact-title" data-i18n-html="contact_title">Let’s make<br>something <em>alive.</em></h2>
       <div class="contact-links"><a href="https://www.instagram.com/puntolineare/" target="_blank" rel="noreferrer">Illustrations on Instagram ↗</a><a href="https://github.com/alicesgarlata" target="_blank" rel="noreferrer">Digital projects on GitHub ↗</a><a href="mailto:alicesgarlata01@gmail.com">Email me ↗</a></div>
     </section>
   </main>
