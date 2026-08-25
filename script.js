@@ -68,3 +68,128 @@ menuButton.addEventListener("click", () => {
 });
 nav.querySelectorAll("a").forEach(link => link.addEventListener("click", () => { nav.classList.remove("open"); menuButton.setAttribute("aria-expanded", "false"); }));
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+
+
+const translations = {
+  en: {
+    nav_work:"Work", nav_editorial:"Editorial", nav_digital:"Digital", nav_about:"About", nav_contact:"Contact",
+    hero_eyebrow:"Hi, I’m Alice · Bologna, Italy",
+    hero_title:'I write, draw,<br>design & build<br><em>curious things.</em>',
+    hero_copy:"I’m a multidisciplinary creative and Digital Humanities student working across editorial writing, visual communication and interactive digital projects.",
+    story_1:'I’ve always moved between different ways of understanding and expressing things: <strong>music, writing, drawing, languages and technology.</strong>',
+    story_2:"I’m especially drawn to independent culture, live music, cultural heritage and the small details that make places and communities feel alive.",
+    story_3:"Curiosity is the thread connecting everything I do.",
+    hobby1_title:"Music first", hobby1_copy:"I’m constantly looking for new sounds, small venues and independent scenes — often the starting point for my writing and visual work.",
+    hobby2_title:"Drawing what I notice", hobby2_copy:'Plants, places, characters and everyday details feed my personal illustration practice, <strong>Puntolineare</strong>.',
+    hobby3_title:"Museums, archives, rabbit holes", hobby3_copy:"I like understanding how cultural material is organised, preserved and turned into something people can actually explore.",
+    hobby4_title:"Learning by making", hobby4_copy:'A lot of my projects start with a question like: <em>“Can I build this?”</em> Then I research, test, learn and iterate until it works.',
+    see_work:"See what<br>I make",
+    work_eyebrow:"Selected visual work · 2024—2026", work_title:"Things I’ve<br>been making.",
+    editorial_eyebrow:"Music journalism · Cultural writing · Interviews", editorial_title:"Editorial.",
+    editorial_intro:"I write about music, independent culture and the way digital platforms shape how we discover, share and experience creative work. My editorial practice moves between criticism, cultural reporting, interviews and social-first storytelling.",
+    digital_eyebrow:"Web design · Digital humanities", digital_title:'Ideas that live<br><em>on the web.</em>', digital_intro:"Alongside my editorial and visual practice, I design and build academic digital projects that connect cultural heritage, storytelling and interactive web experiences.",
+    about_eyebrow:"About Alice", about_title:'Writing, designing<br>and building with <em>curiosity.</em>', about_large:"I’m Alice, a multidisciplinary creative working across editorial writing, visual communication and digital humanities.",
+    about_p1:"My practice moves between music journalism, graphic design, cultural communication and interactive web projects. I write about independent music and cultural scenes, create visual communication for concerts and events in Bologna, and build digital projects around cultural heritage, archives and storytelling.",
+    about_p2:"I’m interested in the point where content, design and technology meet: how research becomes a story, how information becomes an interface, and how digital tools can make culture more accessible and engaging.",
+    about_p3:'<strong>Puntolineare</strong> is the nickname I use for my personal illustration practice — a space for experimentation, visual notes and things made simply because they spark curiosity.',
+    contact_eyebrow:"Have a project, a gig or an idea?", contact_title:'Let’s make<br>something <em>alive.</em>'
+  },
+  it: {
+    nav_work:"Lavori", nav_editorial:"Editoriale", nav_digital:"Digitale", nav_about:"Chi sono", nav_contact:"Contatti",
+    hero_eyebrow:"Ciao, sono Alice · Bologna, Italia",
+    hero_title:'Scrivo, disegno,<br>progetto e costruisco<br><em>cose curiose.</em>',
+    hero_copy:"Sono una creativa multidisciplinare e studentessa di Digital Humanities, tra scrittura editoriale, comunicazione visiva e progetti digitali interattivi.",
+    story_1:'Mi sono sempre mossa tra modi diversi di capire ed esprimere le cose: <strong>musica, scrittura, disegno, lingue e tecnologia.</strong>',
+    story_2:"Mi attirano soprattutto la cultura indipendente, la musica dal vivo, il patrimonio culturale e quei piccoli dettagli che danno identità ai luoghi e alle comunità.",
+    story_3:"La curiosità è il filo che collega tutto quello che faccio.",
+    hobby1_title:"Prima la musica", hobby1_copy:"Cerco continuamente nuovi suoni, piccoli spazi e scene indipendenti: spesso è proprio da lì che partono i miei lavori di scrittura e comunicazione visiva.",
+    hobby2_title:"Disegnare quello che noto", hobby2_copy:'Piante, luoghi, personaggi e dettagli quotidiani alimentano la mia pratica personale di illustrazione, <strong>Puntolineare</strong>.',
+    hobby3_title:"Musei, archivi e rabbit hole", hobby3_copy:"Mi piace capire come i materiali culturali vengono organizzati, conservati e trasformati in qualcosa che le persone possano davvero esplorare.",
+    hobby4_title:"Imparare facendo", hobby4_copy:'Molti miei progetti iniziano con una domanda tipo: <em>“Riesco a costruirlo?”</em> Poi ricerco, provo, imparo e continuo a iterare finché non funziona.',
+    see_work:"Guarda cosa<br>faccio",
+    work_eyebrow:"Lavori visivi selezionati · 2024—2026", work_title:"Cose che ho<br>realizzato.",
+    editorial_eyebrow:"Giornalismo musicale · Scrittura culturale · Interviste", editorial_title:"Editoriale.",
+    editorial_intro:"Scrivo di musica, cultura indipendente e di come le piattaforme digitali influenzano il modo in cui scopriamo, condividiamo e viviamo i lavori creativi. La mia pratica editoriale si muove tra critica, racconto culturale, interviste e contenuti pensati per i social.",
+    digital_eyebrow:"Web design · Digital humanities", digital_title:'Idee che vivono<br><em>sul web.</em>', digital_intro:"Accanto al lavoro editoriale e visivo, progetto e sviluppo progetti digitali accademici che uniscono patrimonio culturale, narrazione ed esperienze web interattive.",
+    about_eyebrow:"Chi sono", about_title:'Scrivere, progettare<br>e costruire con <em>curiosità.</em>', about_large:"Sono Alice, una creativa multidisciplinare che lavora tra scrittura editoriale, comunicazione visiva e digital humanities.",
+    about_p1:"La mia pratica si muove tra giornalismo musicale, graphic design, comunicazione culturale e progetti web interattivi. Scrivo di musica indipendente e scene culturali, creo comunicazione visiva per concerti ed eventi a Bologna e sviluppo progetti digitali legati a patrimonio culturale, archivi e storytelling.",
+    about_p2:"Mi interessa il punto in cui contenuto, design e tecnologia si incontrano: come una ricerca diventa racconto, come l’informazione diventa interfaccia e come gli strumenti digitali possono rendere la cultura più accessibile e coinvolgente.",
+    about_p3:'<strong>Puntolineare</strong> è il nome che uso per la mia pratica personale di illustrazione: uno spazio di sperimentazione, appunti visivi e cose create semplicemente perché accendono la curiosità.',
+    contact_eyebrow:"Hai un progetto, un concerto o un’idea?", contact_title:'Facciamo qualcosa<br>di <em>vivo.</em>'
+  }
+};
+
+function setLanguage(lang){
+  const dict = translations[lang] || translations.en;
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.dataset.i18n;
+    if (dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.querySelectorAll(".lang-btn").forEach(btn => {
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle("active", active);
+    btn.setAttribute("aria-pressed", String(active));
+  });
+  localStorage.setItem("portfolio-language", lang);
+}
+
+document.querySelectorAll(".lang-btn").forEach(btn => {
+  btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+});
+
+const savedLanguage = localStorage.getItem("portfolio-language");
+const browserLanguage = navigator.language && navigator.language.toLowerCase().startsWith("it") ? "it" : "en";
+setLanguage(savedLanguage || browserLanguage);
+
+
+
+// Scroll choreography
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+if (!prefersReducedMotion) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.14,
+    rootMargin: "0px 0px -8% 0px"
+  });
+
+  document.querySelectorAll(".reveal, .scroll-title").forEach(el => revealObserver.observe(el));
+
+  // Hero enters immediately without waiting for scroll.
+  document.querySelectorAll(".hero .reveal, .hero .scroll-title").forEach(el => el.classList.add("is-visible"));
+
+  // Very light parallax for decorative hero marks only.
+  const hero = document.querySelector(".hero");
+  const doodles = hero ? hero.querySelectorAll(".hero-doodles span") : [];
+  let ticking = false;
+
+  const updateParallax = () => {
+    const y = window.scrollY;
+    doodles.forEach((el, index) => {
+      const speed = 0.025 + index * 0.012;
+      el.style.translate = `0 ${Math.min(y * speed, 34)}px`;
+    });
+    ticking = false;
+  };
+
+  window.addEventListener("scroll", () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+} else {
+  document.querySelectorAll(".reveal, .scroll-title").forEach(el => el.classList.add("is-visible"));
+}
